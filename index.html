@@ -8,14 +8,17 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <header id="top">
-    <h1>Naluli</h1>
-    <nav>
-        <a href="#hero">Inicio</a>
-        <a href="#catalogo">Catálogo</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+ <header id="top" class="site-header">
+  <a class="brand" href="#top">
+    <img src="img/logo.jpg" alt="Naluli" class="brand-logo">
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menú">☰</button>
+  <nav id="site-nav" class="nav-links">
+    <a href="#hero">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
   <main class="container">
     <section id="hero">
@@ -64,11 +67,49 @@
       </div>
     </article>
   </div>
+
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>Escribinos por WhatsApp o completá el formulario y te respondemos a la brevedad.</p>
+
+  <div class="contact-actions mt-2">
+    <a class="btn" href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp Naluli">WhatsApp</a>
+    <a class="btn btn-outline" href="https://www.instagram.com/naluli.quilmes/" target="_blank" rel="noopener" aria-label="Instagram Naluli">Instagram</a>
+  </div>
+
+  <form id="contactForm" class="form-card mt-3">
+    <div class="row">
+      <label class="field">
+        <span>Nombre</span>
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+      </label>
+      <label class="field">
+        <span>Email</span>
+        <input type="email" name="email" placeholder="tunombre@email.com" required />
+      </label>
+    </div>
+
+    <label class="field">
+      <span>Mensaje</span>
+      <textarea name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+    </label>
+
+    <button type="submit" class="btn mt-2">Enviar</button>
+    <p class="form-note">Este formulario es de prueba (estático). Para consultas rápidas, escribinos por WhatsApp.</p>
+  </form>
+
+  <address class="addr mt-2">
+  Mitre 665, Quilmes Centro, Buenos Aires
+</address>
+
+<div class="map-card mt-2">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13117.42778790561!2d-58.253894!3d-34.721396!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32fe2bbd024d7%3A0xca75ca7b5498dee0!2sNaluli!5e0!3m2!1ses-419!2sus!4v1757648778816!5m2!1ses-419!2sus"
+  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
 </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-    </section>
   </main>
 
   <footer>
