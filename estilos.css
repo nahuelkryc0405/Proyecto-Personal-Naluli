@@ -1,0 +1,57 @@
+:root {
+  --bg: #fff5f7;       /* fondo rosado pastel */
+  --text: #4a2c2a;     /* texto principal */
+  --muted: #8b5e5a;    /* texto secundario */
+  --accent: #f48fb1;   /* acento rosa pastel */
+  --surface: #fce4ec;  /* fondo de tarjetas / secciones */
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: .75rem;
+  color: var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: .9rem;
+  color: var(--muted);
+  border-top: 1px solid #ddd;
+}
