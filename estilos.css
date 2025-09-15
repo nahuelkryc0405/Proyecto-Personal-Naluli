@@ -201,3 +201,66 @@ input:focus, textarea:focus {
 section{scroll-margin-top:96px}
 
 
+/* ====== Modo oscuro y botón de cambio ====== */
+/* Botón flotante para alternar el tema */
+.theme-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Modo oscuro simple: cambia fondo y texto, respeta componentes */
+body.dark {
+  background-color: #0a0a0a; /* negro profundo pero no absoluto */
+  color: #e3e3e3; /* texto neutro alto contraste */
+}
+
+/* Mantener el botón legible en ambos modos */
+body.dark .theme-toggle {
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+}
+
+/* Enlaces en modo oscuro (contraste accesible) */
+body.dark a {
+  color: #7aa2f7; /* azul más equilibrado en negro */
+}
+body.dark a:hover {
+  color: #a6c8ff;
+}
+
+/* Afinar jerarquía visual en títulos y separadores */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+  color: #f1f3f5;
+}
+
+body.dark hr {
+  border-color: #2a2a2a;
+}
+
+/* ====== Nav ocultable al hacer scroll ====== */
+.hide-on-scroll {
+  transition: transform 200ms ease-out;
+  will-change: transform;
+}
+
+.hide-on-scroll.is-hidden {
+  transform: translateY(-100%);
+}
